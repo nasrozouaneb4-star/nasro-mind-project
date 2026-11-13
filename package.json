@@ -1,0 +1,10 @@
+
+{
+  "name": "nasro-mind",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NASRO MIND - موسوعة النفس والحب وفنون التعامل",
+  "scripts": {
+    "build": "echo Build ready"
+  }
+}
