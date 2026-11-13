@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>NASRO MIND</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#101827;color:white}
+header{background:#17243a;padding:25px 15px;text-align:center}
+header h1{color:#48d9c1;margin:0;font-size:27px}
+header p{color:#c3d1df}
+main{padding:18px;max-width:700px;margin:auto}
+.search{width:100%;padding:15px;border-radius:12px;border:0;font-size:16px}
+.card{background:#1c2b43;margin-top:15px;padding:20px;border-radius:15px;border:1px solid #30425d}
+.card h2{color:#48d9c1}
+button{background:#20b99f;color:#071c24;border:0;padding:12px 18px;border-radius:10px;font-weight:bold}
+footer{text-align:center;padding:25px;color:#aab7c8}
+</style>
+</head>
+<body>
+<header>
+<h1>NASRO MIND</h1>
+<p>موسوعة النفس والحب وفنون التعامل</p>
+</header>
+<main>
+<input class="search" id="search" placeholder="ابحث عن موضوع..." oninput="searchCards()">
+<section id="topics">
+<div class="card"><h2>🧠 علم النفس</h2><p>اكتشف أساسيات علم النفس وفهم السلوك البشري.</p></div>
+<div class="card"><h2>❤️ الحب والعلاقات</h2><p>تعلم أسس العلاقات الصحية والتواصل الجيد.</p></div>
+<div class="card"><h2>🤝 فن التعامل</h2><p>طور مهارات الحوار وفهم الآخرين.</p></div>
+<div class="card"><h2>🌱 تطوير الذات</h2><p>خطوات عملية لبناء الثقة بالنفس وتحسين حياتك.</p></div>
+</section>
+</main>
+<footer>إعداد وتطوير Nasro Zouneb © 2026</footer>
+<script>
+function searchCards(){
+let q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.card').forEach(c=>{
+c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
